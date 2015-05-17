@@ -23,6 +23,10 @@
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+            <uses-permission android:name="android.permission.CALL_PHONE" />
+
         </config-file>
 
         <source-file src="src/android/FreqReader.java" target-dir="src/rm/mere/FreqReader" />
