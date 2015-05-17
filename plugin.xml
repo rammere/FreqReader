@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="rm.mere.plugin.FreqReader"
+      version="0.0.1">
+    <name>Frequency Reader</name>
+    <description>Read Frequency from mic</description>
+    <license>MIT</license>
+    <keywords>phonegap,frequency,mic,</keywords>
+
+
+    <js-module src="www/FreqReader.js" name="FreqReader">
+        <clobbers target="window.FreqReader" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FreqReader">
+                <param name="android-package" value="rm.mere.plugin.FreqReader" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        </config-file>
+
+        <source-file src="src/android/FreqReader.java" target-dir="src/rm/mere/FreqReader" />
+     </platform>
+</plugin>
+
