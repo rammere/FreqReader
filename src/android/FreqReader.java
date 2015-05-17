@@ -35,7 +35,7 @@ public class FreqReader extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if( "start".equals(action))
             {
-              this.start();
+              start();
             }
          else  if( "stop".equals(action))
             {
