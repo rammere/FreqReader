@@ -13,6 +13,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import java.lang.reflect.InvocationTargetException;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONArray;
@@ -32,16 +33,25 @@ public class FreqReader extends CordovaPlugin {
 
     CallStateListener listener;
 
+    public FreqReader(){
+
+              Log.i("RAM", "Handle Message function Start !!");
+
+    }
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+              Log.i("RAM", "Handle Message function Start !!");
         if( "start".equals(action))
             {
+              Log.i("RAM", "Handle Message function Start !!");
+
               start();
+              return true;
             }
          else  if( "stop".equals(action))
             {
             }
 
-        return true;
+        return false;
     }
     private void start() {
       Context context=this.cordova.getActivity().getApplicationContext();

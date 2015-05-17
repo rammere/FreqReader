@@ -17,7 +17,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FreqReader">
-                <param name="android-package" value="rm.mere.plugin.FreqReader" />
+                <param name="android-package" value="rm.mere.FreqReader.FreqReader" />
             </feature>
         </config-file>
 
@@ -28,4 +28,3 @@
         <source-file src="src/android/FreqReader.java" target-dir="src/rm/mere/FreqReader" />
      </platform>
 </plugin>
-
